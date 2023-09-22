@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://k1uedeyrc1ch"]
+
+[ext_resource type="Script" path="res://scenes/text_box/TextBox.cs" id="1_actee"]
+[ext_resource type="Texture2D" uid="uid://xdow4705f1vk" path="res://assets/ui/yellow_panel.png" id="2_5ae5g"]
+[ext_resource type="FontFile" uid="uid://bqq57lhxgxa2g" path="res://assets/fonts/kenvector_future.ttf" id="3_3d141"]
+
+[node name="TextBox" type="MarginContainer"]
+offset_right = 114.0
+offset_bottom = 37.0
+script = ExtResource("1_actee")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 3
+layout_mode = 2
+texture = ExtResource("2_5ae5g")
+region_rect = Rect2(0, 0, 100, 100)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 2
+
+[node name="LabelMarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="LabelMarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3d141")
+text = "EXAMPLE"
+vertical_alignment = 1
+
+[node name="LetterDisplayTimer" type="Timer" parent="."]
+one_shot = true

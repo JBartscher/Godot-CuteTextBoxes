@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://2thwpiyd65t3"]
+
+[ext_resource type="Script" path="res://controllers/DialogManager.cs" id="1_f7ltc"]
+
+[node name="DialogManager" type="Node"]
+script = ExtResource("1_f7ltc")
